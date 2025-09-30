@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Final - Relatórios</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/relatorio.css" />
+  </head>
+
+  <body>
+    <!-- Menu lateral fixo -->
+    <header>
+      <div class="container-logo">
+        <a href="./index.html">
+          <img class="logo" src="./assets/LogoBranca.png" alt="Logo" />
+        </a>
+         <h1 class="titulo">E-commerce Smart - Gestão de Projetos</h1>
+      </div>
+
+      <nav class="container-navegacao">
+        <a class="navegacao" href="./index.html">🏠 Dashboard</a>
+        <a class="navegacao" href="./monitoramento.html">📡 Monitoramento</a>
+      </nav>
+    </header>
+
+    <!-- Conteúdo -->
+    <main>
+      <section class="rel-section">
+        <h2 class="rel-title">Relatórios & Lições Aprendidas</h2>
+
+        <div class="rel-botoes">
+          <button id="btnRelatorio" class="rel-btn">Gerar Relatório</button>
+          <button id="btnLicoes" class="rel-btn">Gerar Lições Aprendidas</button>
+        </div>
+
+        <div class="rel-container">
+          <div class="rel-card">
+            <h3 class="rel-card-title">📑 Relatório de Status</h3>
+            <div id="saidaRelatorio" class="rel-saida">
+              <p>Clique em "Gerar Relatório" para visualizar.</p>
+            </div>
+          </div>
+
+          <div class="rel-card">
+            <h3 class="rel-card-title">💡 Lições Aprendidas</h3>
+            <div id="saidaLicoes" class="rel-saida">
+              <p>Clique em "Gerar Lições Aprendidas" para visualizar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Trabalho de Gestão de Projetos - ADS - Daniel Andrade, Gabriel Leite,
+        Matheus Campos
+      </p>
+    </footer>
+
+    <script src="./scripts/relatorio.js"></script>
+  </body>
+</html>

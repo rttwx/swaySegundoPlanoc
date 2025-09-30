@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard de Gestão - E-commerce Smart</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+   <header class="header">
+      <div class="container">
+        <div class="container-logo">
+          <a href="./index.html">
+            <img class="logo" src="./assets/LogoBranca.png" alt="" />
+          </a>
+          <h1 class="titulo">E-commerce Smart - Gestão de Projetos</h1>
+        </div>
+        <div class="container-navegacao">
+          <a class="navegacao" href="./relatorio.html">📊 Relatorio</a>
+          <a class="navegacao" href="./monitoramento.html">📡 Monitoramento</a>
+        </div>
+      </div>
+    </header>
+  
+
+  <main class="content">
+
+ 
+    <section class="cards-section">
+      <div class="big-card purple">
+        <div>
+          <h3>⚡ Velocity</h3>
+          <p class="valor">18</p>
+          <span>Média das últimas 3 sprints</span>
+        </div>
+      </div>
+      <div class="big-card blue">
+        <div>
+          <h3>💰 CPI</h3>
+          <p class="valor">1.05</p>
+          <span>Abaixo do custo orçado</span>
+        </div>
+      </div>
+      <div class="big-card green">
+        <div>
+          <h3>⏱️ SPI</h3>
+          <p class="valor">0.98</p>
+          <span>Levemente atrasado</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gráficos -->
+    <section class="charts">
+      <div class="chart-box">
+        <h2>📉 Burndown Chart</h2>
+        <canvas id="burndownChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h2>🗓️ Cronograma</h2>
+        <canvas id="cronogramaChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Backlog estilo -->
+    <section class="kanban">
+      <h2>📋 Product Backlog</h2>
+      <div class="kanban-board">
+        <div class="kanban-column">
+          <h3>🔨 Em andamento</h3>
+          <div class="kanban-item high">US-001: Controlar luzes via app</div>
+          <div class="kanban-item medium">US-002: Visualizar temperatura das salas</div>
+        </div>
+        <div class="kanban-column">
+          <h3>📦 Pendente</h3>
+          <div class="kanban-item medium">US-003: Dashboard de consumo de energia</div>
+        </div>
+        <div class="kanban-column">
+          <h3>✅ Concluído</h3>
+          <div class="kanban-item low">US-004: Reservar salas de reunião</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>📝 Detalhamento das Tarefas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tarefa</th>
+            <th>Responsável</th>
+            <th>Status</th>
+            <th>Risco</th>
+            <th>Probabilidade</th>
+          </tr>
+        </thead>
+        <tbody id="backlog-detalhado"></tbody>
+      </table>
+    </section>
+
+    <!-- Riscos -->
+    <section class="box">
+      <h2>⚠️ Matriz de Riscos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Risco</th>
+            <th>Probabilidade</th>
+            <th>Impacto</th>
+            <th>Mitigação</th>
+          </tr>
+        </thead>
+        <tbody id="riscos-detalhados"></tbody>
+      </table>
+    </section>
+  </main>
+
+
+  <script src="./scripts/backlog.js"></script>
+  <script src="./scripts/cronograma.js"></script>
+  <script src="./scripts/riscos.js"></script>
+</body>
+</html>
